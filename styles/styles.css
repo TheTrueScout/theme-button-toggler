@@ -16,8 +16,7 @@ body {
     appearance: none;
   }
   .theme-toggle-style {
-    width: 70%;
-    max-width: 1228px;
+    width: 860px;
     height: 300px;
     box-shadow: inset 0 10px 3px rgba(0, 0, 0, 0.438), 5px 5px 5px rgba(255, 255, 255, 0.795), -5px -5px 5px rgba(0, 0, 0, 0.438);
     background-color: skyblue;
