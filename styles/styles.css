@@ -1,0 +1,165 @@
+  
+body {
+  background-color: rgba(209,217,231);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+  
+  
+  
+  /* Theme changer button */
+
+  .theme-toggle-style input {
+    appearance: none;
+  }
+  .theme-toggle-style {
+    width: 70%;
+    height: 300px;
+    box-shadow: inset 0 10px 3px rgba(0, 0, 0, 0.438), 5px 5px 5px rgba(255, 255, 255, 0.795), -5px -5px 5px rgba(0, 0, 0, 0.438);
+    background-color: skyblue;
+    border-radius: 140px;
+    transition: 0.5s;
+    overflow: hidden;
+    position: relative;
+    padding: 1% 3%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+  
+  .theme-toggle-style:has(input:checked) {
+    background-color: rgba(28,31,44);
+  }
+
+  .star-clouds {
+    position: absolute;
+    scale: 10;
+    right: 300px;
+    bottom: 200px;
+    transition: 0.5s;
+    z-index: 1;
+  }
+
+  /* Note: the element above has been scaled up. reduce/remove scale according to your needs. */
+
+  .theme-toggle-style:has(input:checked) .star-clouds {
+    transform: translateY(43%);
+  }
+
+  .toggle-button {
+    width: 250px;
+    height: 250px;
+    border-radius: 9999px;
+    z-index: 2;
+    transform: translateX(0);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.438), inset 5px 5px 10px rgba(255, 255, 255, 0.795), inset -5px -5px 10px rgba(0, 0, 0, 0.438);
+    transition: 0.5s;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .theme-toggle-style:has(input:checked) .toggle-button {
+    transform: translateX(215%);
+  }
+
+  .theme-toggle-style .toggle-button:hover {  /* Hover */
+    transform: translateX(10px);
+  }
+
+  .theme-toggle-style:has(input:checked) .toggle-button:hover {  /* Hover */
+    transform: translateX(calc(215% - 10px));
+  }
+
+  /* Note: The hover effect will be buggy during the transition after clicking. Unfortunately, I can not fix this right now as  i do not know any javascript to halt pointer events during the transition. */
+
+  .moon-sun {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -30px;
+    margin: auto 0;
+    scale: 10;
+    box-shadow:  inset 5px 5px 10px rgba(255, 255, 255, 0.795), inset -5px -5px 10px rgba(0, 0, 0, 0.438);
+    transition: 0.5s;
+  }
+
+  /* Note: the element above has been scaled up. reduce/remove scale according to your needs. */
+
+  .theme-toggle-style:has(input:checked) .moon-sun {
+    transform: translateX(-50%);
+  }
+
+  .toggle-button-bg1 {
+    position: absolute;
+    left: 17%;
+    height: 26px;
+    width: 26px;
+    scale: 20;
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 0.14);
+    z-index: 1;
+    transition: 0.5s;
+  }
+
+  .toggle-button:hover + * {
+    transform: translateX(1px);
+  }
+
+  .theme-toggle-style:has(input:checked) .toggle-button:hover + * {
+    transform: translateX(calc(100% - 1px));
+  }
+
+  .theme-toggle-style:has(input:checked) .toggle-button-bg1 {
+    transform: translateX(100%);
+  }
+
+  .toggle-button-bg2 {
+    position: absolute;
+    left: 17%;
+    height: 26px;
+    width: 26px;
+    scale: 30;
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 0.14);
+    z-index: 1;
+    transition: 0.5s;
+  }
+
+  .toggle-button:hover + * + * {
+    transform: translateX(1px);
+  }
+
+  .theme-toggle-style:has(input:checked) .toggle-button:hover + * + *{
+    transform: translateX(calc(65% - 1px));
+  }
+
+  .theme-toggle-style:has(input:checked) .toggle-button-bg2 {
+    transform: translateX(65%);
+  }
+
+  .toggle-button-bg3 {
+    position: absolute;
+    left: 23%;
+    height: 26px;
+    width: 26px;
+    scale: 35;
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 0.14);
+    z-index: 1;
+    transition: 0.5s;
+  }
+
+  .toggle-button:hover + * + * + * {
+    transform: translateX(1px);
+  }
+
+  .theme-toggle-style:has(input:checked) .toggle-button:hover + * + * + *{
+    transform: translateX(calc(45% - 1px));
+  }
+
+  .theme-toggle-style:has(input:checked) .toggle-button-bg3{
+    transform: translateX(45%);
+  }
